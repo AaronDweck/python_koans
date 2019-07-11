@@ -18,8 +18,13 @@
 #
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
+    if(a == 0 or b == 0 or c == 0):
+        raise AssertionError('All sides should be greater than 0')
+    if(a + b < c or b + c < a or c + a < b):
+        raise AssertionError('the sum of any two sides should be greater than the third one')
     pass
 
 # Error class used in part 2.  No need to change this code.
 class TriangleError(Exception):
     pass
+
